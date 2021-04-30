@@ -1,0 +1,67 @@
+{% extends "templates/layouts/container.html" %}
+
+
+{% block content %}
+<main class="p-sign-in">
+  <div class="p-sign-in__card">
+    <div class="row">
+      <div class="col-6">
+        <div class="row p-sign-in__form align-items-center">
+          <div class="col-12">
+            <form action="">
+              <div class="row">
+                <div class="col-12 p-sign-in__form-header">
+                  <h1 class="p-sign-in__form-title">Sign In</h1>
+                  <p class="p-sign-in__form-desc">Welcome to monitorDoc</p>
+                </div>
+                <div class="col-12 mb-2">
+                  <div class="p-sign-in__form-group">
+                    <label for="">Your Email</label>
+                    <input type="email" placeholder="Enter your email address" class="p-sign-in__form-field">
+                  </div>
+                  <div class="p-sign-in__form-group">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Enter your password" class="p-sign-in__form-field">
+                  </div>
+                </div>
+                <div class="col-12 mb-4">
+                  <div class="row justify-content-between">
+                    <div class="col-auto">
+                      <div class="p-sign-in__form-checkbox">
+                        <input type="checkbox" id="fruit1" name="fruit-1" value="Apple">
+                        <label for="fruit1">Remember me</label>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <a href="" class="p-sign-in__form-forgot">Forgot Password?</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="p-sign-in__form-button" type="submit">Sign In</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="row justify-content-between p-sign-in__kv">
+          <div class="p-sign-in__kv-header col-12">
+            <h2 class="p-sign-in__kv-title">MonitorDoc</h2>
+            <p class="p-sign-in__kv-desc">Patient Monitor Software</p>
+          </div>
+          <div class="p-sign-in__kv-img col-12">
+            <img src="{{ base.static }}images/kv-login.svg" alt="login">
+          </div>
+          <div class="p-sign-in__kv-footer col-12 align-self-end">
+            Don’t have an account? <a href="">Click here</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
