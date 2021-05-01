@@ -8,6 +8,13 @@ window.addEventListener('load', () => {
 
     switch (moduleName) {
 
+      case 'datatables':
+        import('./modules/datatables')
+        .then((module) => {
+          module.default(node);
+        });
+        break;
+
       default:
         console.log('module not found!');
         break;

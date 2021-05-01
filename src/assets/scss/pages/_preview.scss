@@ -1,0 +1,30 @@
+.p-preview {
+  position: relative;
+  box-sizing: border-box;
+
+  &__title {
+    font-family: $font-fm-light;
+    line-height: normal;
+    color: var(--base-color-black80);
+    font-size: 2.5rem;
+  }
+
+  &__ava {
+    aspect-ratio: 1 / 1;
+    background-color: var(--base-color-black50);
+    position: relative;
+    border-radius: 50px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 4px;
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}

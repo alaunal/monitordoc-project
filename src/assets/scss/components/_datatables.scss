@@ -1,0 +1,59 @@
+.c-datatables {
+  .dataTable-wrapper {
+    .dataTable-top {
+      padding: 0 0 24px;
+
+      .dataTable-dropdown {
+        .dataTable-selector {
+          padding: 6px 10px;
+          margin-right: 6px;
+        }
+      }
+
+      .dataTable-search {
+        .dataTable-input {
+          padding: 6px 12px;
+          min-width: 300px;
+          border-radius: 50px;
+          outline: none;
+          border: 1px solid var(--base-color-black70);
+          height: 38px;
+          background-color: var(--base-color-black20);
+
+          &:focus {
+            background-color: var(--base-color-white100);
+            border: 1px solid #6d09ed;
+          }
+        }
+      }
+    }
+
+    .dataTable-container {
+      border-bottom: 0;
+
+      .dataTable-table {
+        > thead > tr > th {
+          border-bottom: 2px solid var(--base-color-black60);
+          padding: 14px 10px;
+          background-color: var(--base-color-black20);
+        }
+
+        > tbody > tr {
+          &:not(:last-child) {
+            > td {
+              border-bottom: 1px solid var(--base-color-black30);
+            }
+          }
+        }
+
+        > tbody > tr > td {
+          padding: 14px 10px;
+        }
+      }
+    }
+
+    .dataTable-bottom {
+      padding: 24px 0 0;
+    }
+  }
+}

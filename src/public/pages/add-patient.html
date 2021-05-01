@@ -2,7 +2,15 @@
 
 
 {% block content %}
-<main>
-  <h1>Comming soon!</h1>
+<main class="row">
+  <div class="col-auto">
+    {% include "templates/components/sidebar.html" %}
+
+  </div>
+  <div class="col o-content">
+    <div class="p-preview">
+      <h1 class="p-preview__title mb-4">Add Patient</h1>
+    </div>
+  </div>
 </main>
 {% endblock %}

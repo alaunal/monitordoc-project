@@ -10,6 +10,7 @@
 
 // -- VENDORS PUT HERE
 @import "vendors/bootstrap/bootstrap-custom";
+@import "vendors/vanilla-dataTables.css";
 
 
 // -- OBJECTS OF STYLES
@@ -19,8 +20,12 @@
 @import "objects/card";
 
 // -- COMPONENTS OF STYLES
+@import "components/sidebar";
+@import "components/datatables";
 
 // -- PAGES OF STYLES
 @import "pages/sign-in";
+@import "pages/preview";
 
 // -- HELPERS OF STYLES
+@import "helper/text";
