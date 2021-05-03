@@ -2,8 +2,155 @@
 
 
 {% block content %}
-<main class="p-sign-in">
+<main class="p-register">
+  <div class="p-register__card">
+    <div class="row">
+      <div class="col-12 mb-5">
+        <h1 class="p-register__form-title">Register</h1>
+        <p class="p-register__form-desc">Welcome to monitorDoc, Let's join with us</p>
+      </div>
+      <div class="col-12 mb-4">
+        <ul class="p-register__tabs" data-module="tabs" data-target="#register-tab">
+          <li class="p-register__tabs-item tabs-nav active" data-tab="#tab-1">Doctor</li>
+          <li class="p-register__tabs-item tabs-nav" data-tab="#tab-2">Patient</li>
+        </ul>
+      </div>
+      <div class="col-12" id="register-tab">
+        <div class="p-register__tabs-pane pane active" id="tab-1">
+          <form action="">
+            <div class="row">
+              <div class="col px-1">
+                <div class="p-sign-in__form-group">
+                  <label for="">First Name <span class="text-danger">*</span></label>
+                  <input type="text" placeholder="First name" class="p-sign-in__form-field">
+                </div>
+              </div>
+              <div class="col px-1">
+                <div class="p-sign-in__form-group">
+                  <label for="">Last Name <span class="text-danger">*</span></label>
+                  <input type="text" placeholder="First name" class="p-sign-in__form-field">
+                </div>
+              </div>
+            </div>
+            <div class="p-sign-in__form-group px-1">
+              <label for="">Your Email <span class="text-danger">*</span></label>
+              <input type="email" placeholder="Enter your email address" class="p-sign-in__form-field">
+            </div>
+            <div class="p-sign-in__form-group px-1">
+              <label for="">Department</label>
+              <select name="" id="" class="p-sign-in__form-field">
+                <option value="">Please select</option>
+                <option value="">AAA</option>
+                <option value="">ABA</option>
+                <option value="">BCC</option>
+                <option value="">ABD</option>
+              </select>
+            </div>
+            <div class="row">
+              <div class="col-2 px-1">
+                <div class="p-sign-in__form-group">
+                  <label for="">Code <span class="text-danger">*</span></label>
+                  <input type="text" placeholder="+92" class="p-sign-in__form-field">
+                </div>
+              </div>
+              <div class="col-10 px-1">
+                <div class="p-sign-in__form-group">
+                  <label for="">Phone Number <span class="text-danger">*</span></label>
+                  <input type="text" placeholder="10 digit phone number" class="p-sign-in__form-field">
+                </div>
+              </div>
+            </div>
+            <div class="p-sign-in__form-group px-1">
+              <label for="">Password <span class="text-danger">*</span></label>
+              <input type="password" placeholder="Enter your password" class="p-sign-in__form-field">
+            </div>
+            <div class="p-sign-in__form-group px-1">
+              <label for="">Re-confirm Password <span class="text-danger">*</span></label>
+              <input type="password" placeholder="Confirm Password" class="p-sign-in__form-field">
+            </div>
 
+            <div class="row my-4">
+              <div class="col-12">
+                <div class="p-sign-in__form-checkbox">
+                  <input type="checkbox" id="fruit1" name="fruit-1" value="Apple">
+                  <label for="fruit1">agree with term & condition</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 mb-5">
+                <button class="p-sign-in__form-button" type="submit">Sign Up</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="p-register__tabs-pane pane" id="tab-2">
+          <form action="">
+            <div class="row">
+              <div class="col px-1">
+                <div class="p-sign-in__form-group">
+                  <label for="">First Name <span class="text-danger">*</span></label>
+                  <input type="text" placeholder="First name" class="p-sign-in__form-field">
+                </div>
+              </div>
+              <div class="col px-1">
+                <div class="p-sign-in__form-group">
+                  <label for="">Last Name <span class="text-danger">*</span></label>
+                  <input type="text" placeholder="First name" class="p-sign-in__form-field">
+                </div>
+              </div>
+            </div>
+            <div class="p-sign-in__form-group px-1">
+              <label for="">Your Email <span class="text-danger">*</span></label>
+              <input type="email" placeholder="Enter your email address" class="p-sign-in__form-field">
+            </div>
+            <div class="row">
+              <div class="col-2 px-1">
+                <div class="p-sign-in__form-group">
+                  <label for="">Code <span class="text-danger">*</span></label>
+                  <input type="text" placeholder="+92" class="p-sign-in__form-field">
+                </div>
+              </div>
+              <div class="col-10 px-1">
+                <div class="p-sign-in__form-group">
+                  <label for="">Phone Number <span class="text-danger">*</span></label>
+                  <input type="text" placeholder="10 digit phone number" class="p-sign-in__form-field">
+                </div>
+              </div>
+            </div>
+            <div class="p-sign-in__form-group px-1">
+              <label for="">Password <span class="text-danger">*</span></label>
+              <input type="password" placeholder="Enter your password" class="p-sign-in__form-field">
+            </div>
+            <div class="p-sign-in__form-group px-1">
+              <label for="">Re-confirm Password <span class="text-danger">*</span></label>
+              <input type="password" placeholder="Confirm Password" class="p-sign-in__form-field">
+            </div>
+
+            <div class="row my-4">
+              <div class="col-12">
+                <div class="p-sign-in__form-checkbox">
+                  <input type="checkbox" id="fruit2" name="fruit-2" value="orange">
+                  <label for="fruit2">agree with term & condition</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 mb-5">
+                <button class="p-sign-in__form-button" type="submit">Sign Up</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="p-sign-in__kv-footer col-12">
+        Do have an account? <a href="/">Sign in</a>
+      </div>
+    </div>
+  </div>
 </main>
 
 {% endblock %}

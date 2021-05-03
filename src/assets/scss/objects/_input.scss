@@ -1,0 +1,46 @@
+.o-input {
+  position: relative;
+  box-sizing: border-box;
+
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: rem(32px);
+    }
+  }
+
+  &__label {
+    label {
+      font-size: 1rem;
+      font-family: $font-fm-medium;
+      color: var(--base-color-black80);
+      line-height: normal;
+    }
+  }
+
+  &__field {
+    select,
+    input[type=text],
+    input[type=number],
+    input[type=password],
+    input[type=email] {
+      display: inline-block;
+      width: 100%;
+      outline: none;
+      border-radius: 6px;
+      background-color: var(--base-color-white100);
+      border: 1px solid var(--base-color-black50);
+      height: 40px;
+      padding: 6px 12px;
+      color: var(--base-color-black80);
+
+      &:focus {
+        outline: none;
+        border: 1px solid var(--base-color-black70);
+      }
+    }
+  }
+
+  &__cta {
+    margin: 48px 0;
+  }
+}

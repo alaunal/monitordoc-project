@@ -5,7 +5,8 @@
   padding: 32px;
   background: linear-gradient(176.16deg, #6D09ED 19.33%, #7B009A 99.99%, rgba(196, 196, 196, 0) 100%);
   overflow: hidden;
-  position: sticky;
+  position: fixed;
+  z-index: 10;
   top: 0;
 
   &__brand {

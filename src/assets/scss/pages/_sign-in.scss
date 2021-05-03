@@ -1,5 +1,5 @@
 .p-sign-in {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: grid;
   place-items: center;
@@ -59,7 +59,8 @@
       color: var(--base-color-black60);
       margin-bottom: 2px;
     }
-
+    select,
+    textarea,
     input[type='text'],
     input[type='password'],
     input[type='email'] {
@@ -244,7 +245,7 @@
 }
 
 .p-forgot-password {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: grid;
   place-items: center;
@@ -282,5 +283,86 @@
     margin: 0;
     color: var(--base-color-black60);
     text-align: center;
+  }
+}
+
+.p-register {
+  min-height: 100vh;
+  width: 100%;
+  padding: 60px 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    176.16deg,
+    #6d09ed 19.33%,
+    #7b009a 99.99%,
+    rgba(196, 196, 196, 0) 100%
+  );
+
+  &__card {
+    width: 640px;
+    padding: 36px 56px;
+    background-color: var(--base-color-white100);
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.15);
+  }
+
+  &__form {
+    padding: 0 84px;
+    position: relative;
+  }
+
+  &__form-title {
+    font-family: $font-fm-medium;
+    font-size: rem(42px);
+    line-height: 1.15;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: #272b3f;
+  }
+
+  &__form-desc {
+    font-family: $font-fm-light;
+    font-size: rem(18px);
+    line-height: normal;
+    margin: 0;
+    color: var(--base-color-black60);
+  }
+
+  &__tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__tabs-item {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 24px;
+    margin: 0;
+    font-size: 1rem;
+    font-family: $font-fm-medium;
+    color: var(--base-color-black70);
+    background-color: transparent;
+    cursor: pointer;
+
+    &.active {
+      background-color: var(--base-color-primary100);
+      color: var(--base-color-white100);
+      border-radius: 8px;
+
+      &:hover {
+        background-color: var(--base-color-primary80);
+      }
+    }
+  }
+
+  &__tabs-pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
   }
 }

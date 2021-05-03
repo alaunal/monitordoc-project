@@ -37,6 +37,12 @@
 }
 
 .o-content {
-  padding: 28px 52px;
+  position: relative;
+  padding: 28px 32px 28px 428px;
   box-sizing: border-box;
+}
+
+.o-gray {
+  background-color: #E4EBF2;
+  min-height: 100vh;
 }
