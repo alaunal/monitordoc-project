@@ -38,8 +38,12 @@
 
 .o-content {
   position: relative;
-  padding: 28px 32px 28px 428px;
+  padding-left: 390px;
   box-sizing: border-box;
+
+  &__container {
+    padding: 28px 32px;
+  }
 }
 
 .o-gray {

@@ -15,7 +15,7 @@
   line-height: normal;
   font-family: $font-fm-base;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 8px;
 
   &.primary {
     background-color: var(--base-color-primary100);
@@ -62,8 +62,26 @@
     }
   }
 
+  &.export {
+    background-color: var(--base-color-orange100);
+    color: var(--base-color-white100);
+
+    &:hover {
+      background-color: var(--base-color-orange80);
+    }
+  }
+
   &.block {
     width: 100%;
+  }
+
+  &.xs {
+    height: 28px;
+    min-width: 60px;
+    font-size: rem(12px);
+    line-height: normal;
+    font-family: $font-fm-base;
+    padding: 4px 14px;
   }
 
   &.sm {

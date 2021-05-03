@@ -1,0 +1,22 @@
+.c-header {
+  position: sticky;
+  height: 50px;
+  background-color: var(--base-color-white100);
+  padding: 8px 28px;
+  z-index: 10;
+  top: 0;
+
+  &__nav {
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      font-family: $font-fm-medium;
+      line-height: normal;
+      color: var(--base-color-black80);
+
+      &:hover {
+        color: var(--base-color-primary100);
+      }
+    }
+  }
+}
