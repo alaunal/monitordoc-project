@@ -19,6 +19,12 @@ window.addEventListener('load', () => {
         })
         break
 
+      case 'chart':
+        import('./modules/chart').then((module) => {
+          module.default(node)
+        })
+        break
+
       default:
         console.log('module not found!')
         break
