@@ -11,19 +11,31 @@
       }
 
       .dataTable-search {
+        position: relative;
+
         .dataTable-input {
-          padding: 6px 12px;
+          padding: 6px 12px 6px 40px;
           min-width: 300px;
           border-radius: 50px;
           outline: none;
           border: 1px solid var(--base-color-black70);
-          height: 38px;
+          height: 40px;
           background-color: var(--base-color-black20);
 
           &:focus {
             background-color: var(--base-color-white100);
             border: 1px solid #6d09ed;
           }
+        }
+
+        &:before {
+          content: '\e610';
+          font-family: 'themify';
+          position: absolute;
+          font-size: 18px;
+          top: 8px;
+          left: 10px;
+          color: var(--base-color-black80);
         }
       }
     }
@@ -34,7 +46,7 @@
       .dataTable-table {
         > thead > tr > th {
           border-bottom: 2px solid var(--base-color-black60);
-          padding: 14px 10px;
+          padding: 16px 10px;
           background-color: var(--base-color-black20);
         }
 
@@ -47,7 +59,7 @@
         }
 
         > tbody > tr > td {
-          padding: 14px 10px;
+          padding: 16px 10px;
         }
       }
     }

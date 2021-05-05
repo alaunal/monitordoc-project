@@ -1,39 +1,35 @@
 const tabs = (params) => {
+  let idTarget = params.dataset.target;
+  let navTabs = params.querySelectorAll('.tabs-nav');
 
-    let idTarget = params.dataset.target;
-    let navTabs = params.querySelectorAll('.tabs-nav');
+  navTabs.forEach((element) => {
+    element.addEventListener('click', (e) => {
+      e.preventDefault();
 
-    navTabs.forEach(element => {
+      let activeElement = e.target.classList.contains('active');
 
+      if (!activeElement) {
+        let targetNav = e.target;
+        let idTab = targetNav.dataset.tab;
 
-        element.addEventListener('click', (e) => {
+        let contentTabsActive = document.querySelector(`${idTarget}>${idTab}`);
+        let contentTabs = document.querySelectorAll(`${idTarget} .pane`);
 
-            e.preventDefault();
-
-            let activeElement = e.target.classList.contains('active');
-
-            if (!activeElement) {
-                let targetNav = e.target;
-                let idTab = targetNav.dataset.tab;
-
-                let contentTabsActive = document.querySelector(`${idTarget}>${idTab}`);
-                let contentTabs = document.querySelectorAll(`${idTarget} .pane`);
-
-                [].forEach.call(navTabs, function(el) {
-                    el.classList.remove("active");
-                });
-
-                [].forEach.call(contentTabs, function(el) {
-                    el.classList.remove("active");
-                });
-
-                contentTabsActive.classList.add('active');
-                targetNav.classList.add('active');
-            }
+        [].forEach.call(navTabs, function (el) {
+          el.classList.remove('active');
         });
-    });
 
-    return true;
+        [].forEach.call(contentTabs, function (el) {
+          el.classList.remove('active');
+        });
+
+        contentTabsActive.classList.add('active');
+        targetNav.classList.add('active');
+      }
+    });
+  });
+
+  return true;
 };
 
 export default tabs;

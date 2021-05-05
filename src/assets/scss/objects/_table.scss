@@ -35,4 +35,30 @@
       }
     }
   }
+
+  &.sm {
+    thead {
+      td,
+      th {
+        padding: 6px rem(2px);
+        vertical-align: middle;
+        border-bottom: 1px solid var(--base-color-black50);
+        font-size: rem(12px);
+        font-family: $font-fm-medium;
+        background-color: var(--base-color-black20);
+      }
+    }
+
+    tbody {
+      tr {
+        th,
+        td {
+          vertical-align: middle;
+          padding: 6px rem(2px);
+          font-family: $font-fm-base;
+          font-size: rem(12px);
+        }
+      }
+    }
+  }
 }
