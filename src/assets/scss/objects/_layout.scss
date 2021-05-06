@@ -38,11 +38,15 @@
 
 .o-content {
   position: relative;
-  padding-left: 390px;
+  padding-left: 340px;
   box-sizing: border-box;
 
   &__container {
     padding: 28px 32px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 390px;
   }
 }
 

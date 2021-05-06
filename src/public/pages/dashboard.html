@@ -4,7 +4,7 @@
 {% block content %}
 <main class="row o-gray">
   <div class="col-auto">
-    {% include "templates/components/sidebar.html" %}
+    {% include "templates/components/sidebar-dashboard.html" %}
 
   </div>
   <div class="col o-content">
@@ -124,7 +124,8 @@
               <div class="col-auto">
                 <button class="o-btn xs success" data-module="dropdown" data-target="#add-1" type="button">Add</button>
                 <button class="o-btn xs danger" data-module="dropdown" data-target="#edit-1" type="button">Edit</button>
-                <button class="o-btn xs export" data-module="dropdown" data-target="#export-1" type="button">Export</button>
+                <button class="o-btn xs export" data-module="dropdown" data-target="#export-1"
+                  type="button">Export</button>
               </div>
 
               <div class="c-dropdown__add dropdown-area" id="add-1">
@@ -137,103 +138,275 @@
                   <button class="o-btn xs" type="reset" data-module="dropdown" data-target="#add-1">cancel</button>
                 </form>
               </div>
-            </div>
 
-            <div class="c-dropdown__list dropdown-area" id="export-1">
-              <nav>
-                <a href="">Export to Excel</a>
-                <a href="">Export to PDF</a>
-              </nav>
-            </div>
+              <div class="c-dropdown__list dropdown-area" id="export-1">
+                <nav>
+                  <a href="">Export to Excel</a>
+                  <a href="">Export to PDF</a>
+                </nav>
+              </div>
 
-            <div class="c-dropdown__edit dropdown-area" id="edit-1">
-              <div class="row justify-content-between align-items-center mb-3">
-                <div class="col-auto">Heart Rate</div>
-                <div class="col-auto">
-                  <button class="o-btn xs danger">Remove All</button>
+              <div class="c-dropdown__edit dropdown-area" id="edit-1">
+                <div class="row justify-content-between align-items-center mb-3">
+                  <div class="col-auto">Heart Rate</div>
+                  <div class="col-auto">
+                    <button class="o-btn xs danger">Remove All</button>
+                  </div>
                 </div>
-              </div>
-              <div class="c-dropdown__edit__content">
-                <table class="o-table sm">
-                  <thead>
-                    <tr>
-                      <th>No</th>
-                      <th>Date time</th>
-                      <th>Value</th>
-                      <th>Author</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>21 Mar 2021, 00:00</td>
-                      <td>73</td>
-                      <td>Dr. Malak Shammas, MD</td>
-                      <td><button class="o-btn xs">edit</button></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>21 Mar 2021, 00:00</td>
-                      <td>73</td>
-                      <td>Dr. Malak Shammas, MD</td>
-                      <td><button class="o-btn xs">edit</button></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>21 Mar 2021, 00:00</td>
-                      <td>73</td>
-                      <td>Dr. Malak Shammas, MD</td>
-                      <td><button class="o-btn xs">edit</button></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>21 Mar 2021, 00:00</td>
-                      <td>73</td>
-                      <td>Dr. Malak Shammas, MD</td>
-                      <td><button class="o-btn xs">edit</button></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>21 Mar 2021, 00:00</td>
-                      <td>73</td>
-                      <td>Dr. Malak Shammas, MD</td>
-                      <td><button class="o-btn xs">edit</button></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>21 Mar 2021, 00:00</td>
-                      <td>73</td>
-                      <td>Dr. Malak Shammas, MD</td>
-                      <td><button class="o-btn xs">edit</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                <div class="c-dropdown__edit__content">
+                  <table class="o-table sm">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Date time</th>
+                        <th>Value</th>
+                        <th>Author</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
+              </div>
             </div>
             <canvas id="chart-1" data-module="chart" class="o-canvas"></canvas>
           </div>
 
           <div class="o-card mb-3">
-            <div class="row justify-content-between align-items-center mb-3">
+            <div class="row justify-content-between align-items-center mb-3 c-dropdown">
               <div class="col-auto">Urea</div>
               <div class="col-auto">
-                <button class="o-btn xs success">Add</button>
-                <button class="o-btn xs danger">Edit</button>
-                <button class="o-btn xs export">Export</button>
+                <button class="o-btn xs success" data-module="dropdown" data-target="#add-2" type="button">Add</button>
+                <button class="o-btn xs danger" data-module="dropdown" data-target="#edit-2" type="button">Edit</button>
+                <button class="o-btn xs export" data-module="dropdown" data-target="#export-2"
+                  type="button">Export</button>
+              </div>
+
+              <div class="c-dropdown__add dropdown-area" id="add-2">
+                <form action="" data-module="modals" data-type="submit">
+                  <div class="row mb-2 align-items-center">
+                    <div class="col-7 o-input__label"><label>Enter Current Value</label></div>
+                    <div class="col-5 o-input__field"><input type="text" name="" placeholder="Enter value"></div>
+                  </div>
+                  <button class="o-btn xs secondary" type="submit">add</button>
+                  <button class="o-btn xs" type="reset" data-module="dropdown" data-target="#add-2">cancel</button>
+                </form>
+              </div>
+
+              <div class="c-dropdown__list dropdown-area" id="export-2">
+                <nav>
+                  <a href="">Export to Excel</a>
+                  <a href="">Export to PDF</a>
+                </nav>
+              </div>
+
+              <div class="c-dropdown__edit dropdown-area" id="edit-2">
+                <div class="row justify-content-between align-items-center mb-3">
+                  <div class="col-auto">Urea</div>
+                  <div class="col-auto">
+                    <button class="o-btn xs danger">Remove All</button>
+                  </div>
+                </div>
+                <div class="c-dropdown__edit__content">
+                  <table class="o-table sm">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Date time</th>
+                        <th>Value</th>
+                        <th>Author</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
               </div>
             </div>
             <canvas id="chart-2" data-module="chart" class="o-canvas"></canvas>
           </div>
 
           <div class="o-card mb-3">
-            <div class="row justify-content-between align-items-center mb-3">
+            <div class="row justify-content-between align-items-center mb-3 c-dropdown">
               <div class="col-auto">Blood pH</div>
               <div class="col-auto">
-                <button class="o-btn xs success">Add</button>
-                <button class="o-btn xs danger">Edit</button>
-                <button class="o-btn xs export">Export</button>
+                <button class="o-btn xs success" data-module="dropdown" data-target="#add-3" type="button">Add</button>
+                <button class="o-btn xs danger" data-module="dropdown" data-target="#edit-3" type="button">Edit</button>
+                <button class="o-btn xs export" data-module="dropdown" data-target="#export-3"
+                  type="button">Export</button>
+              </div>
+
+              <div class="c-dropdown__add dropdown-area" id="add-3">
+                <form action="" data-module="modals" data-type="submit">
+                  <div class="row mb-2 align-items-center">
+                    <div class="col-7 o-input__label"><label>Enter Current Value</label></div>
+                    <div class="col-5 o-input__field"><input type="text" name="" placeholder="Enter value"></div>
+                  </div>
+                  <button class="o-btn xs secondary" type="submit">add</button>
+                  <button class="o-btn xs" type="reset" data-module="dropdown" data-target="#add-3">cancel</button>
+                </form>
+              </div>
+
+              <div class="c-dropdown__list dropdown-area" id="export-3">
+                <nav>
+                  <a href="">Export to Excel</a>
+                  <a href="">Export to PDF</a>
+                </nav>
+              </div>
+
+              <div class="c-dropdown__edit dropdown-area" id="edit-3">
+                <div class="row justify-content-between align-items-center mb-3">
+                  <div class="col-auto">Blood pH</div>
+                  <div class="col-auto">
+                    <button class="o-btn xs danger">Remove All</button>
+                  </div>
+                </div>
+                <div class="c-dropdown__edit__content">
+                  <table class="o-table sm">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Date time</th>
+                        <th>Value</th>
+                        <th>Author</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Mar 2021, 00:00</td>
+                        <td>73</td>
+                        <td>Dr. Malak Shammas, MD</td>
+                        <td><button class="o-btn xs">edit</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
               </div>
             </div>
             <canvas id="chart-3" data-module="chart" class="o-canvas"></canvas>

@@ -1,6 +1,6 @@
 .c-sidebar {
   display: block;
-  width: 390px;
+  width: 340px;
   height: 100vh;
   padding: 32px;
   background: linear-gradient(176.16deg, #6D09ED 19.33%, #7B009A 99.99%, rgba(196, 196, 196, 0) 100%);
@@ -104,6 +104,10 @@
           margin-right: 1rem;
           font-size: inherit;
           color: inherit;
+
+          &.success {
+            color: var(--base-color-green100);
+          }
         }
 
         &:hover {
@@ -133,5 +137,9 @@
     &:hover {
       color: var(--base-color-black30);
     }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 390px;
   }
 }
