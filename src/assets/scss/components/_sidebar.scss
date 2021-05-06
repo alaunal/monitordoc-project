@@ -1,10 +1,10 @@
 .c-sidebar {
   display: block;
-  width: 340px;
+  width: 350px;
   height: 100vh;
-  padding: 32px;
+  padding: 24px;
   background: linear-gradient(176.16deg, #6D09ED 19.33%, #7B009A 99.99%, rgba(196, 196, 196, 0) 100%);
-  overflow: hidden;
+  overflow-y: auto;
   position: fixed;
   z-index: 10;
   top: 0;
@@ -141,5 +141,6 @@
 
   @include media-breakpoint-up(xxl) {
     width: 390px;
+    padding: 32px;
   }
 }
