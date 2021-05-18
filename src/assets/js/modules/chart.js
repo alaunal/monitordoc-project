@@ -52,7 +52,45 @@ Chart.register(
 );
 
 const chartInit = (params) => {
-  let getId = params.getAttribute('id');
+  let dataVar = params.dataset.var;
+  let dataBackground = params.dataset.background;
+  let dataLabel = params.dataset.label;
+  let dataCore = dataChart[dataVar];
+
+  if (typeof dataCore !== 'undefined') {
+    new Chart(params, {
+      type: 'line',
+      data: {
+        labels: dataCore.label,
+        datasets: [
+          {
+            label: dataLabel,
+            data: dataCore.value,
+            backgroundColor: [dataBackground],
+            borderColor: [dataBackground],
+            borderWidth: 1,
+            fill: true,
+            tension: 0.25,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+        elements: {
+          point: {
+            radius: 0,
+          },
+        },
+      },
+    });
+  }
+
+  /*
 
   let data = {};
 
@@ -126,6 +164,8 @@ const chartInit = (params) => {
       },
     },
   });
+
+  */
 };
 
 export default chartInit;

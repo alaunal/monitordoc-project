@@ -37,6 +37,12 @@ window.addEventListener('load', () => {
         });
         break;
 
+      case 'alert':
+        import('./modules/alert').then((module) => {
+          module.default(node);
+        });
+        break;
+
       default:
         console.log('module not found!');
         break;

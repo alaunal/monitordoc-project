@@ -29,6 +29,17 @@ const modals = (params) => {
       });
       break;
 
+    case 'popup':
+      params.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        let target = params.dataset.target;
+        let popupModal = document.querySelector(target);
+
+        popupModal.classList.add('active');
+      });
+      break;
+
     case 'close':
       params.addEventListener('click', (e) => {
         e.preventDefault();

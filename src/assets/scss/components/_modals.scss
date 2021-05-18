@@ -1,4 +1,5 @@
 .c-modals {
+  &__popup,
   &__confirm {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

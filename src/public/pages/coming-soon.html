@@ -1,0 +1,20 @@
+{% extends "templates/layouts/container.html" %}
+
+
+{% block content %}
+<main class="row">
+  <div class="col-auto">
+    {% include "templates/components/sidebar.html" %}
+  </div>
+  <div class="col o-content">
+    <div class="o-content__full row align-items-center justify-content-center">
+      <div class="col-5 text-center">
+        <img src="{{ base.static }}images/undercontraction.svg" alt="" width="400">
+        <h2>Coming soon</h2>
+        <p>This Feature still under constration, keep our update soon!</p>
+        <p class="mt-5"><small>&copy; Copyright <strong>monitorDoc</strong></small></p>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

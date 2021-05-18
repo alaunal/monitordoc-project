@@ -15,6 +15,31 @@
 
       <div class="row my-5 o-input">
         <div class="col-12">
+
+          <div class="c-alert c-alert--success mb-5" data-module="alert">
+            <h4>Success</h4>
+            <p>Blade is the simple, yet powerful templating engine that is included with Laravel</p>
+            <button class="c-alert__close"><i class="ti ti-close"></i></button>
+          </div>
+
+          <div class="c-alert c-alert--error mb-5" data-module="alert">
+            <h4>Error</h4>
+            <p>Blade is the simple, yet powerful templating engine that is included with Laravel</p>
+            <button class="c-alert__close"><i class="ti ti-close"></i></button>
+          </div>
+
+          <div class="c-alert c-alert--info mb-5" data-module="alert">
+            <h4>Info</h4>
+            <p>Blade is the simple, yet powerful templating engine that is included with Laravel</p>
+            <button class="c-alert__close"><i class="ti ti-close"></i></button>
+          </div>
+
+          <div class="c-alert c-alert--warning mb-5" data-module="alert">
+            <h4>Warning</h4>
+            <p>Blade is the simple, yet powerful templating engine that is included with Laravel</p>
+            <button class="c-alert__close"><i class="ti ti-close"></i></button>
+          </div>
+
           <form action="">
             <div class="row o-input__group align-items-center">
               <div class="o-input__label col-3">
@@ -136,6 +161,10 @@
                       <option value="">Dr. ABD</option>
                     </select>
                   </div>
+                  <div class="col-auto pl-1">
+                    <button class="o-btn sm feed success" type="button" data-module="modals"
+                      data-target="#modal-add-doctor" data-type="popup"><i class="ti ti-plus"></i></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -153,6 +182,10 @@
                       <option value="">Drs. BCC</option>
                       <option value="">Dr. ABD</option>
                     </select>
+                  </div>
+                  <div class="col-auto pl-1">
+                    <button class="o-btn sm feed success" type="button" data-module="modals"
+                      data-target="#modal-add-nurses" data-type="popup"><i class="ti ti-plus"></i></button>
                   </div>
                 </div>
               </div>
@@ -186,9 +219,47 @@
         </div>
       </div>
 
-      <p><em>Please Note : On adding patient , the patient will receive an OTP for sharing medical data. Please ensure the patient is informed of the same</em></p>
+      <p><em>Please Note : On adding patient , the patient will receive an OTP for sharing medical data. Please ensure
+          the patient is informed of the same</em></p>
     </div>
 
+    <!-- Modals add doctor -->
+    <div class="c-modals__popup modals-area" id="modal-add-doctor">
+      <div class="content">
+        <form action="">
+          <h4 class="mb-2">Add Doctor</h4>
+          <div class="o-input__field">
+            <input type="text" placeholder="name doctor ...">
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-auto">
+              <button class="o-btn sm primary" data-module="modals" data-type="close">Save</button>
+              <button class="o-btn sm" data-module="modals" data-type="close">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modals add nurses -->
+    <div class="c-modals__popup modals-area" id="modal-add-nurses">
+      <div class="content">
+        <form action="">
+          <h4 class="mb-2">Add Nurses</h4>
+          <div class="o-input__field">
+            <input type="text" placeholder="name nurses ...">
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-auto">
+              <button class="o-btn sm primary" data-module="modals" data-type="close">Save</button>
+              <button class="o-btn sm" data-module="modals" data-type="close">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </main>
 {% endblock %}
